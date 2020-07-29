@@ -49,3 +49,7 @@ body {
     margin-left: 20px;
   }
   
+  .historyBtn{
+    min-width: 150px;
+    margin-right: 8px;
+  }
