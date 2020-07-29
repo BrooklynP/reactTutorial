@@ -81,7 +81,7 @@ class Game extends React.Component {
             if (historyItem.move) {
                 return (
                     <li key={moveNumber}>
-                        <button className="historyBtn" onClick={() => this.jumpTo(moveNumber)}>{desc}</button>
+                        <button className="historyBtn" onClick={() => this.jumpTo(moveNumber)} disabled={this.state.stepNumber === moveNumber ? 'selected' : ''}>{desc}</button>
                         <small>{historyItem.move.counter} Place on {historyItem.move.col},{historyItem.move.row}</small>
                     </li>
                 )
@@ -89,7 +89,7 @@ class Game extends React.Component {
             else {
                 return (
                     <li key={moveNumber}>
-                        <button className="historyBtn" onClick={() => this.jumpTo(moveNumber)}>{desc}</button>
+                        <button className="historyBtn" onClick={() => this.jumpTo(moveNumber)} disabled={this.state.stepNumber === moveNumber ? 'selected' : ''}>{desc}</button>
                     </li>
                 )
             }
